@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>For You ❤️</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            height: 100vh;
+            background: black;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            font-family: Arial, sans-serif;
+            color: white;
+
+            overflow: hidden;
+        }
+
+        .heart {
+            position: relative;
+
+            width: 120px;
+            height: 120px;
+
+            background: #ff4d6d;
+
+            transform: rotate(-45deg);
+
+            animation: pulse 1s infinite;
+
+            box-shadow:
+                0 0 20px #ff4d6d,
+                0 0 50px #ff4d6d,
+                0 0 90px #ff4d6d;
+        }
+
+        .heart::before,
+        .heart::after {
+
+            content: "";
+
+            position: absolute;
+
+            width: 120px;
+            height: 120px;
+
+            background: #ff4d6d;
+
+            border-radius: 50%;
+        }
+
+        .heart::before {
+            top: -60px;
+            left: 0;
+        }
+
+        .heart::after {
+            top: 0;
+            left: 60px;
+        }
+
+        @keyframes pulse {
+
+            0%, 100% {
+                transform: rotate(-45deg) scale(1);
+            }
+
+            50% {
+                transform: rotate(-45deg) scale(1.2);
+            }
+
+        }
+
+        h1 {
+            margin-top: 80px;
+
+            font-size: 28px;
+
+            text-shadow:
+                0 0 10px #ff4d6d,
+                0 0 20px #ff4d6d;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <div class="heart"></div>
+
+    <h1>I love you ❤️</h1>
+
+</body>
+
+</html>
